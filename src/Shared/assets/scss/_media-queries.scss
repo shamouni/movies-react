@@ -1,0 +1,39 @@
+// MAX
+@mixin Mobile-xxs {
+    @media screen and (max-width: 280px) {
+      @content;
+    }
+}
+
+@mixin Mobile-xs {
+    @media screen and (max-width: 575.98px) {
+        @content;
+    }
+}
+
+@mixin Mobile-sm {
+    @media screen and (max-width: 767.98px) {
+        @content;
+    }
+}
+
+@mixin Tablet-md {
+    @media screen and (max-width: 991.98px) {
+        @content;
+    }
+}
+
+@mixin Desktop-lg {
+    @media screen and (max-width: 1199.98px) {
+        @content;
+    }
+}
+
+
+
+// MIN
+@mixin Min-1200 {
+    @media screen and (min-width: 1200px) {
+        @content;
+    }
+}

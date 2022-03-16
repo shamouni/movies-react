@@ -1,24 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import {Route, Routes, BrowserRouter as Router} from 'react-router-dom';
+import {Provider} from 'react-redux';
+import store from './store/store';
 
-function App() {
+import Header from './components/Header';
+import Footer from './components/Footer';
+import Home from './components/Home';
+import SinglePost from './components/SinglePost';
+
+import './Shared/assets/scss/main.scss';
+import './Shared/assets/scss/slider.scss';
+import './Shared/assets/css/font-awesome.css';
+import 'react-loading-skeleton/dist/skeleton.css';
+
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Provider store={store}>
+      <Router>
+        <Header />
+
+        <Routes>
+          <Route path="/" element={<Home />} exact />
+          <Route path="/category" element={<Home />} exact />
+          <Route path="/post/:id" element={<SinglePost />} />
+        </Routes>
+
+        <Footer />
+      </Router>
+    </Provider>
   );
 }
 
