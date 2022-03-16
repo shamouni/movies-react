@@ -11,6 +11,7 @@ import './Shared/assets/scss/main.scss';
 import './Shared/assets/scss/slider.scss';
 import './Shared/assets/css/font-awesome.css';
 import 'react-loading-skeleton/dist/skeleton.css';
+const ROOT = process.env.REACT_APP_ROOT;
 
 
 const App = () => {
@@ -20,9 +21,9 @@ const App = () => {
         <Header />
 
         <Routes>
-          <Route path="/" element={<Home />} exact />
-          <Route path="/category" element={<Home />} exact />
-          <Route path="/post/:id" element={<SinglePost />} />
+          <Route path={ROOT} element={<Home />} exact />
+          <Route path={ROOT + '/category'} element={<Home />} exact />
+          <Route path={ROOT + '/post/:id'} element={<SinglePost />} />
         </Routes>
 
         <Footer />

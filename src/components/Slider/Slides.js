@@ -1,13 +1,14 @@
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import SliderSkeleton from './Slider-skeleton';
+const ROOT = process.env.REACT_APP_ROOT;
 
 const Slides = ({items = []}) => {
 
     const getLink = id => {
         const rnd = Math.ceil(Math.random() * 7) + 1;
         const idMock = id > 8 ? rnd : id;
-        return '/post/' + idMock;
+        return ROOT + '/post/' + idMock;
     }
 
     return (
@@ -15,7 +16,7 @@ const Slides = ({items = []}) => {
         {items && items.length > 0 ? (
             items.map(i => (
                 <Link to={getLink(i.id)} key={i.id} className="slide">
-                    <img src={"assets/images/" + i.image} alt='' />
+                    <img src={`${ROOT}/assets/images/${i.image}`} alt='' />
                 </Link>
             ))
         ) : (

@@ -1,5 +1,6 @@
 import React, {useEffect} from 'react'
 
+const ROOT = process.env.REACT_APP_ROOT;
 const Body1 = document.getElementsByTagName('body')[0];
 const BC = Body1.classList;
 const Cls = 'show-nav';
@@ -36,7 +37,7 @@ const NavMobile = () => {
         <>
         <div id="nav-mobile">
             <a className="logo" href="#!">
-                <img src="assets/images/logo.png" alt="mobile logo" />
+                <img src={`${ROOT}/assets/images/logo.png`} alt="mobile logo" />
             </a>
             <ul>
                 <li><a href="#!">Home</a></li>

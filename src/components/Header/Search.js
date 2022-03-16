@@ -2,6 +2,7 @@ import {useState, useEffect} from 'react';
 import {Link} from 'react-router-dom';
 import DataMock from '../../store/data-mock.json';
 
+const ROOT = process.env.REACT_APP_ROOT;
 const body = document.querySelector('body');
 
 
@@ -56,7 +57,7 @@ const Search = () => {
             {(flag && filteredList.length > 0) && (
                 <div className="list">
                     {filteredList.map(i => (
-                        <Link onMouseDown={itemClick} to={'/post/' + i.id} key={i.id} >
+                        <Link onMouseDown={itemClick} to={ROOT + '/post/' + i.id} key={i.id} >
                             {i.title}
                         </Link>
                     ))}

@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+const ROOT = process.env.REACT_APP_ROOT;
 
 const Trailer = ({post = {}}) => {
 
@@ -11,8 +12,8 @@ const Trailer = ({post = {}}) => {
 
                     <div className="col">
                         <video 
-                            src="/assets/images/goal.mp4" 
-                            poster={`/assets/images/thumb${id}.jpg`} 
+                            src={`${ROOT}/assets/images/goal.mp4`} 
+                            poster={`${ROOT}/assets/images/thumb${id}.jpg`} 
                             width='100%' 
                             controls 
                             preload='none'

@@ -1,5 +1,6 @@
 import Skeleton, { SkeletonTheme } from 'react-loading-skeleton';
 import { Link } from 'react-router-dom';
+const ROOT = process.env.REACT_APP_ROOT;
 
 const bColor = '#34343b';
 const hColor = '#454545';
@@ -8,12 +9,11 @@ const PostsSidebar = ({ loading = true }) => {
 
     return (
         <>
-
         {loading ? (
             [...Array(14)].map((_i, k) => (
                 <div className=" col col-12" key={k}>
-                    <Link to={`/post/${k < 8 ? k + 1 : k - 7}`}>
-                        <img src={`assets/images/s${k+1}.jpg`} alt="" />
+                    <Link to={ROOT + '/post/' + (k < 8 ? k + 1 : k - 7)}>
+                        <img src={`${ROOT}/assets/images/s${k+1}.jpg`} alt="" />
                         <span className='date'>{Math.ceil(Math.random() * 22 + 2)}  days ago</span>
                     </Link>
                 </div>

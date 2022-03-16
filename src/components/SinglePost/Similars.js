@@ -1,4 +1,5 @@
 import {Link} from 'react-router-dom';
+const ROOT = process.env.REACT_APP_ROOT;
 
 const Similars = () => {
     return (
@@ -8,8 +9,8 @@ const Similars = () => {
                 <div className="row">
                     {[...Array(6)].map((i, k) => (
                         <div className="col col-2" key={k}>
-                            <Link to={"/post/" + (k + 1)}>
-                                <img src={`/assets/images/thumb${k+1}.jpg`} alt="" />
+                            <Link to={ROOT + "/post/" + (k + 1)}>
+                                <img src={`${ROOT}/assets/images/thumb${k+1}.jpg`} alt="" />
                                 <h5>Movies name</h5>
                                 <div className="vote">
                                     <i className="fa fa-heart mr-05" aria-hidden="true"></i>

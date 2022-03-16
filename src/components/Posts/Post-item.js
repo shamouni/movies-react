@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import {Link} from 'react-router-dom';
+const ROOT = process.env.REACT_APP_ROOT;
 
 const PostItem = ({ post }) => {
 
@@ -16,12 +17,12 @@ const PostItem = ({ post }) => {
       imdb,
     } = post;
 
-    const url = `/post/${id}`;
+    const url = `${ROOT}/post/${id}`;
 
     return (
         <div className='post-item'>
             <Link to={url} className="figure">
-                <img src={`assets/images/thumb${id}.jpg`} alt="" width='207' height='290' />
+                <img src={`${ROOT}/assets/images/thumb${id}.jpg`} alt="" width='207' height='290' />
             </Link>
             <div className="text">
                 <h5 className='title'>

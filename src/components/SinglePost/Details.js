@@ -1,5 +1,6 @@
-import PropTypes from 'prop-types';
 import {useState} from 'react';
+import PropTypes from 'prop-types';
+const ROOT = process.env.REACT_APP_ROOT;
 
 
 const Details = ({post = {}}) => {
@@ -42,7 +43,7 @@ const Details = ({post = {}}) => {
 
                 <div className="row">
                     <div className="figure col col-auto">
-                        {id && <img src={`/assets/images/thumb${id}.jpg`} alt="" width={207} height={290} />}
+                        {id && <img src={`${ROOT}/assets/images/thumb${id}.jpg`} alt="" width={207} height={290} />}
                     </div>
                     <div className="col">
                         <div className="text">
