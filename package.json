@@ -1,6 +1,6 @@
 {
-  "name": "movies-app",
-  "homepage": "https://shamouni.github.io/movies-app",
+  "name": "movies-react",
+  "homepage": "https://shamouni.github.io/movies-react",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
