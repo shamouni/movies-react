@@ -2,6 +2,9 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Visit Online - App URL
+https://shamouni.github.io/movies-react
+
 ## Available Scripts
 
 In the project directory, you can run:
