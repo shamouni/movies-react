@@ -16,7 +16,7 @@ const ROOT = process.env.REACT_APP_ROOT;
 
 const App = () => {
   return (
-    <Provider store={store}> 
+    <Provider store={store}>
       <Router>
         <Header />
 
