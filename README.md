@@ -1,3 +1,10 @@
+# React Movies Blog
+
+A React app - just for fun!
+Demo: https://shamouni.github.io/movies-react
+
+![alt text](https://raw.githubusercontent.com/shamouni/shamouni.github.io/master/assets/images/movies-blog-screenshot.jpg)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
