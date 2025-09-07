@@ -1,6 +1,6 @@
 # React Movies Blog
 
-A React app - just for fun!
+A React app - just for fun! <br />
 Demo: https://shamouni.github.io/movies-react
 
 ![alt text](https://raw.githubusercontent.com/shamouni/shamouni.github.io/master/assets/images/movies-blog-screenshot.jpg)
